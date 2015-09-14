@@ -7,7 +7,7 @@
 
 * `verilog` is the language
 * `iverilog` is the compiler
-* `gtkwave` is a graphical wave viewer for later in the course
+* `gtkwave` is a graphical wave viewer (for later in the course)
 
 
 ### USAGE
