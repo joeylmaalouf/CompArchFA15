@@ -20,7 +20,7 @@ Run the executable:
 
 `vvp hw1` or `./hw1`
 
-Pipe the output of the executable to a `.txt` file instead of STDOUT:
+Pipe the output of the executable to a `.txt` file instead of `STDOUT`:
 
 `vvp hw1 > results.txt`
 
