@@ -13,12 +13,15 @@
 ### USAGE
 
 Compile a `.v` file to an executable:
+
 `iverilog hw1.v -o hw1`
 
 Run the executable:
+
 `vvp hw1` or `./hw1`
 
-Pipe the output of the executable to a `.txt` file:
+Pipe the output of the executable to a `.txt` file instead of STDOUT:
+
 `vvp hw1 > results.txt`
 
 I have not yet figured out `.do` files.
