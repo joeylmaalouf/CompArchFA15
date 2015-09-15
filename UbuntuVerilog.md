@@ -24,4 +24,4 @@ Pipe the output of the executable to a `.txt` file instead of `STDOUT`:
 
 `vvp hw1 > results.txt`
 
-I have not yet figured out `.do` files.
+`.do` files are ModelSim's particular style of batch file for automating things, which we can replicate with `.sh` scripts.
