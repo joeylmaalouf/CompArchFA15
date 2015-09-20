@@ -1,0 +1,36 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xcc76a0 .scope module, "behavioralMultiplexer" "behavioralMultiplexer" 2 1;
+ .timescale 0 0;
+v0xceac70_0 .net "address", 1 0, L_0xcfabb0; 1 drivers
+v0xcfa020_0 .net "address0", 0 0, C4<z>; 0 drivers
+v0xcfa0c0_0 .net "address1", 0 0, C4<z>; 0 drivers
+v0xcfa160_0 .net "in0", 0 0, C4<z>; 0 drivers
+v0xcfa210_0 .net "in1", 0 0, C4<z>; 0 drivers
+v0xcfa2b0_0 .net "in2", 0 0, C4<z>; 0 drivers
+v0xcfa390_0 .net "in3", 0 0, C4<z>; 0 drivers
+v0xcfa430_0 .net "inputs", 3 0, L_0xcfaa20; 1 drivers
+v0xcfa520_0 .net "out", 0 0, L_0xcface0; 1 drivers
+L_0xcfaa20 .concat [ 1 1 1 1], C4<z>, C4<z>, C4<z>, C4<z>;
+L_0xcfabb0 .concat [ 1 1 0 0], C4<z>, C4<z>;
+L_0xcface0 .part/v L_0xcfaa20, L_0xcfabb0, 1;
+S_0xcc6d10 .scope module, "structuralMultiplexer" "structuralMultiplexer" 2 10;
+ .timescale 0 0;
+v0xcfa5c0_0 .net "address0", 0 0, C4<z>; 0 drivers
+v0xcfa680_0 .net "address1", 0 0, C4<z>; 0 drivers
+v0xcfa720_0 .net "in0", 0 0, C4<z>; 0 drivers
+v0xcfa7c0_0 .net "in1", 0 0, C4<z>; 0 drivers
+v0xcfa840_0 .net "in2", 0 0, C4<z>; 0 drivers
+v0xcfa8e0_0 .net "in3", 0 0, C4<z>; 0 drivers
+v0xcfa980_0 .net "out", 0 0, C4<z>; 0 drivers
+S_0xceab80 .scope module, "testMultiplexer" "testMultiplexer" 2 18;
+ .timescale 0 0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "multiplexer.v";
