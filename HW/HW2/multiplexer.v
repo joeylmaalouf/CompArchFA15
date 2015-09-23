@@ -25,6 +25,7 @@ module testMultiplexer;
   wire out;
   integer i;
   behavioralMultiplexer multiplexer (out, address0, address1, in0, in1, in2, in3);
+  // structuralMultiplexer multiplexer (out, address0, address1, in0, in1, in2, in3);
 
   initial begin
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");

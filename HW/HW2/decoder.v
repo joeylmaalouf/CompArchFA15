@@ -13,15 +13,26 @@ module structuralDecoder(out0, out1, out2, out3, address0, address1, enable);
   output out0, out1, out2, out3;
   input address0, address1;
   input enable;
-  // Your decoder code here
+  wire nA0, nA1;
+  wire nA0andnA1, nA0andA1, A0andnA1, A0andA1;
+  not notgate0(nA0, address0);
+  not notgate1(nA1, address1);
+  and andgate0(nA0andnA1, nA0, nA1);
+  and andgate1(nA0andA1, address0, nA1);
+  and andgate2(A0andnA1, nA0, address1);
+  and andgate3(A0andA1, address0, address1);
+  and andgate4(out0, enable, nA0andnA1);
+  and andgate5(out1, enable, nA0andA1);
+  and andgate6(out2, enable, A0andnA1);
+  and andgate7(out3, enable, A0andA1);
 endmodule
 
 module testDecoder; 
   reg addr0, addr1;
   reg enable;
   wire out0, out1, out2, out3;
-  behavioralDecoder decoder (out0, out1, out2, out3, addr0, addr1, enable);
-  // structuralDecoder decoder (out0, out1, out2, out3, addr0, addr1, enable); // Swap after testing
+  // behavioralDecoder decoder (out0, out1, out2, out3, addr0, addr1, enable);
+  structuralDecoder decoder (out0, out1, out2, out3, addr0, addr1, enable);
 
   initial begin
     $display("En A0 A1 | O0 O1 O2 O3 | Expected Output");
