@@ -4,31 +4,132 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0xcc76a0 .scope module, "behavioralMultiplexer" "behavioralMultiplexer" 2 1;
+S_0x26bbff0 .scope module, "structuralMultiplexer" "structuralMultiplexer" 2 10;
  .timescale 0 0;
-v0xceac70_0 .net "address", 1 0, L_0xcfabb0; 1 drivers
-v0xcfa020_0 .net "address0", 0 0, C4<z>; 0 drivers
-v0xcfa0c0_0 .net "address1", 0 0, C4<z>; 0 drivers
-v0xcfa160_0 .net "in0", 0 0, C4<z>; 0 drivers
-v0xcfa210_0 .net "in1", 0 0, C4<z>; 0 drivers
-v0xcfa2b0_0 .net "in2", 0 0, C4<z>; 0 drivers
-v0xcfa390_0 .net "in3", 0 0, C4<z>; 0 drivers
-v0xcfa430_0 .net "inputs", 3 0, L_0xcfaa20; 1 drivers
-v0xcfa520_0 .net "out", 0 0, L_0xcface0; 1 drivers
-L_0xcfaa20 .concat [ 1 1 1 1], C4<z>, C4<z>, C4<z>, C4<z>;
-L_0xcfabb0 .concat [ 1 1 0 0], C4<z>, C4<z>;
-L_0xcface0 .part/v L_0xcfaa20, L_0xcfabb0, 1;
-S_0xcc6d10 .scope module, "structuralMultiplexer" "structuralMultiplexer" 2 10;
+v0x26deb80_0 .net "address0", 0 0, C4<z>; 0 drivers
+v0x26f3740_0 .net "address1", 0 0, C4<z>; 0 drivers
+v0x26f37e0_0 .net "in0", 0 0, C4<z>; 0 drivers
+v0x26f3880_0 .net "in1", 0 0, C4<z>; 0 drivers
+v0x26f3930_0 .net "in2", 0 0, C4<z>; 0 drivers
+v0x26f39d0_0 .net "in3", 0 0, C4<z>; 0 drivers
+v0x26f3ab0_0 .net "out", 0 0, C4<z>; 0 drivers
+S_0x26bb6e0 .scope module, "testMultiplexer" "testMultiplexer" 2 18;
  .timescale 0 0;
-v0xcfa5c0_0 .net "address0", 0 0, C4<z>; 0 drivers
-v0xcfa680_0 .net "address1", 0 0, C4<z>; 0 drivers
-v0xcfa720_0 .net "in0", 0 0, C4<z>; 0 drivers
-v0xcfa7c0_0 .net "in1", 0 0, C4<z>; 0 drivers
-v0xcfa840_0 .net "in2", 0 0, C4<z>; 0 drivers
-v0xcfa8e0_0 .net "in3", 0 0, C4<z>; 0 drivers
-v0xcfa980_0 .net "out", 0 0, C4<z>; 0 drivers
-S_0xceab80 .scope module, "testMultiplexer" "testMultiplexer" 2 18;
+v0x26f4270_0 .var "address0", 0 0;
+v0x26f4310_0 .var "address1", 0 0;
+v0x26f43c0_0 .var/i "i", 31 0;
+v0x26f4440_0 .var "in0", 0 0;
+v0x26f4520_0 .var "in1", 0 0;
+v0x26f45d0_0 .var "in2", 0 0;
+v0x26f4650_0 .var "in3", 0 0;
+v0x26f4700_0 .net "out", 0 0, L_0x26f4b80; 1 drivers
+S_0x26f3b50 .scope module, "multiplexer" "behavioralMultiplexer" 2 23, 2 1, S_0x26bb6e0;
  .timescale 0 0;
+v0x26f3c40_0 .net "address", 1 0, L_0x26f4a40; 1 drivers
+v0x26f3d00_0 .net "address0", 0 0, v0x26f4270_0; 1 drivers
+v0x26f3da0_0 .net "address1", 0 0, v0x26f4310_0; 1 drivers
+v0x26f3e40_0 .net "in0", 0 0, v0x26f4440_0; 1 drivers
+v0x26f3ec0_0 .net "in1", 0 0, v0x26f4520_0; 1 drivers
+v0x26f3f60_0 .net "in2", 0 0, v0x26f45d0_0; 1 drivers
+v0x26f4040_0 .net "in3", 0 0, v0x26f4650_0; 1 drivers
+v0x26f40e0_0 .net "inputs", 3 0, L_0x26f4800; 1 drivers
+v0x26f41d0_0 .alias "out", 0 0, v0x26f4700_0;
+L_0x26f4800 .concat [ 1 1 1 1], v0x26f4440_0, v0x26f4520_0, v0x26f45d0_0, v0x26f4650_0;
+L_0x26f4a40 .concat [ 1 1 0 0], v0x26f4270_0, v0x26f4310_0;
+L_0x26f4b80 .part/v L_0x26f4800, L_0x26f4a40, 1;
+    .scope S_0x26bb6e0;
+T_0 ;
+    %vpi_call 2 26 "$display", "A1 A0 | I0 I1 I2 I3 | O | Expected Output";
+    %set/v v0x26f43c0_0, 0, 32;
+T_0.0 ;
+    %load/v 8, v0x26f43c0_0, 32;
+   %cmpi/s 8, 64, 32;
+    %jmp/0xz T_0.1, 5;
+    %ix/load 1, 5, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.2, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %jmp T_0.3;
+T_0.2 ;
+    %mov 8, 2, 1;
+T_0.3 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f4310_0, 8, 1;
+    %ix/load 1, 4, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.4, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %jmp T_0.5;
+T_0.4 ;
+    %mov 8, 2, 1;
+T_0.5 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f4270_0, 8, 1;
+    %ix/load 1, 3, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.6, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %jmp T_0.7;
+T_0.6 ;
+    %mov 8, 2, 1;
+T_0.7 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f4440_0, 8, 1;
+    %ix/load 1, 2, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.8, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %jmp T_0.9;
+T_0.8 ;
+    %mov 8, 2, 1;
+T_0.9 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f4520_0, 8, 1;
+    %ix/load 1, 1, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.10, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %jmp T_0.11;
+T_0.10 ;
+    %mov 8, 2, 1;
+T_0.11 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f45d0_0, 8, 1;
+    %load/v 8, v0x26f43c0_0, 1; Only need 1 of 32 bits
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x26f4650_0, 8, 1;
+    %delay 1000, 0;
+    %ix/load 1, 5, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.12, 4;
+    %load/x1p 8, v0x26f43c0_0, 1;
+    %mov 9, 0, 4;
+    %jmp T_0.13;
+T_0.12 ;
+    %mov 8, 2, 5;
+T_0.13 ;
+; Save base=8 wid=5 in lookaside.
+    %muli 8, 2, 5;
+    %ix/load 1, 4, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_0.14, 4;
+    %load/x1p 13, v0x26f43c0_0, 1;
+    %mov 14, 0, 4;
+    %jmp T_0.15;
+T_0.14 ;
+    %mov 13, 2, 5;
+T_0.15 ;
+; Save base=13 wid=5 in lookaside.
+    %muli 13, 1, 5;
+    %add 8, 13, 5;
+    %vpi_call 2 35 "$display", " %b  %b |  %b  %b  %b  %b | %b | Input%d", v0x26f4310_0, v0x26f4270_0, v0x26f4440_0, v0x26f4520_0, v0x26f45d0_0, v0x26f4650_0, v0x26f4700_0, T<8,5,u>;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v0x26f43c0_0, 32;
+    %set/v v0x26f43c0_0, 8, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
