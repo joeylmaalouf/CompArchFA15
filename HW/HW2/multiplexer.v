@@ -1,3 +1,7 @@
+`define AND and #50
+`define OR or #50
+`define NOT not #50
+
 module behavioralMultiplexer(out, address0, address1, in0, in1, in2, in3);
   output out;
   input address0, address1;
