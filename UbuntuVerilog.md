@@ -7,7 +7,7 @@
 
 * `verilog` is the language
 * `iverilog` is the compiler
-* `gtkwave` is a graphical wave viewer (for later in the course)
+* `gtkwave` is a graphical wave viewer
 
 
 ### USAGE
@@ -23,5 +23,16 @@ Run the executable:
 Pipe the output of the executable to a `.txt` file instead of `STDOUT`:
 
 `vvp hw1 > results.txt`
+
+View waves of a given module:
+
+1. Insert the following code after the module's `initial begin`:
+```
+    $dumpfile("wavefile.vcd");
+    $dumpvars(0, moduleName);
+```
+2. `gtkwave wavefile.vcd`
+3. Add wires from the left side of the screen
+4. Zoom to the timescale you want
 
 `.do` files are ModelSim's particular style of batch file for automating things, which we can replicate with `.sh` scripts.
