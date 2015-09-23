@@ -1,6 +1,7 @@
 # HW2 Results
 
 ### Adder
+![Adder](adder.png)
 ```
 A B Ci | Co S | Expected Output
 0 0  0 |  0 0 | Both False
@@ -14,6 +15,7 @@ A B Ci | Co S | Expected Output
 ```
 
 ### Decoder
+![Decoder](decoder.png)
 ```
 En A0 A1 | O0 O1 O2 O3 | Expected Output
  0  0  0 |  0  0  0  0 | All False
@@ -27,6 +29,7 @@ En A0 A1 | O0 O1 O2 O3 | Expected Output
 ```
 
 ### Multiplexer
+![Multiplexer](multiplexer.png)
 ```
 Concise Table:
 A1 A0 | I0 I1 I2 I3 | O | Expected Output

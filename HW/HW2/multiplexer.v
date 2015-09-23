@@ -49,6 +49,9 @@ module testMultiplexer;
   structuralMultiplexer multiplexer (out, address0, address1, in0, in1, in2, in3);
 
   initial begin
+    $dumpfile("multiplexer.vcd");
+    $dumpvars(0, testMultiplexer);
+
   	$display("Concise Table:");
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");
     address1 = 0; address0 = 0;

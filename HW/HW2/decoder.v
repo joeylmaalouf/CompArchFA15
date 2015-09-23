@@ -36,6 +36,9 @@ module testDecoder;
   structuralDecoder decoder (out0, out1, out2, out3, addr0, addr1, enable);
 
   initial begin
+    $dumpfile("decoder.vcd");
+    $dumpvars(0, testDecoder);
+
     $display("En A0 A1 | O0 O1 O2 O3 | Expected Output");
     enable = 0; addr0 = 0; addr1 = 0; #1000
     $display(" %b  %b  %b |  %b  %b  %b  %b | All False", enable, addr0, addr1, out0, out1, out2, out3);

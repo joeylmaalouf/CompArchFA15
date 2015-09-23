@@ -27,6 +27,9 @@ module testFullAdder;
   structuralFullAdder adder (sum, carryout, a, b, carryin);
 
   initial begin
+    $dumpfile("adder.vcd");
+    $dumpvars(0, testFullAdder);
+
     $display("A B Ci | Co S | Expected Output");
     a = 0; b = 0; carryin = 0; #1000
     $display("%b %b  %b |  %b %b | Both False", a, b, carryin, carryout, sum);
