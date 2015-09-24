@@ -65,6 +65,9 @@ module testMultiplexer;
   	$display("Full Table:");
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");
     for (i = 0; i < 64; i = i + 1) begin
+      // We have 6 bits to iterate through, so we can pull them from the numbers 0-63 (a total of 2^6 numbers)
+      // Indexing an int takes the value from its bit representation (least significant bit first)! How cool is that?
+      // I really just didn't want to have 64 of the same display line over and over.
       address1 = i[5];
       address0 = i[4];
       in0 = i[3];
