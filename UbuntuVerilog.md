@@ -27,7 +27,7 @@ Pipe the output of the executable to a `.txt` file instead of `STDOUT`:
 View waves of a given module:
 
 * Insert the following code after the module's `initial begin`:
-```
+```verilog
     $dumpfile("wavefile.vcd");
     $dumpvars(0, moduleName);
 ```
