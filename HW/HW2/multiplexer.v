@@ -52,7 +52,7 @@ module testMultiplexer;
     $dumpfile("multiplexer.vcd");
     $dumpvars(0, testMultiplexer);
 
-  	$display("Concise Table:");
+    $display("Concise Table:");
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");
     address1 = 0; address0 = 0;
     $display(" %b  %b |  X  X  X  X | X | Input%d", address1, address0, 2 * address1 + 1 * address0);
