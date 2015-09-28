@@ -1,7 +1,5 @@
-# ignore binary executables:
-*    # ignore all
-!*.* # then unignore all with extensions
-!*/  # and unignore all directories
+# ignore executables
+*.vvp
 
-# ignore test files
+# ignore test results
 *.vcd
