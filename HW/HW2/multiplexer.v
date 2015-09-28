@@ -52,7 +52,7 @@ module testMultiplexer;
     $dumpfile("multiplexer.vcd");
     $dumpvars(0, testMultiplexer);
 
-  	$display("Concise Table:");
+    $display("Concise Table:");
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");
     address1 = 0; address0 = 0;
     $display(" %b  %b |  X  X  X  X | X | Input%d", address1, address0, 2 * address1 + 1 * address0);
@@ -62,7 +62,7 @@ module testMultiplexer;
     $display(" %b  %b |  X  X  X  X | X | Input%d", address1, address0, 2 * address1 + 1 * address0);
     address1 = 1; address0 = 1;
     $display(" %b  %b |  X  X  X  X | X | Input%d", address1, address0, 2 * address1 + 1 * address0);
-  	$display("Full Table:");
+    $display("Full Table:");
     $display("A1 A0 | I0 I1 I2 I3 | O | Expected Output");
     for (i = 0; i < 64; i = i + 1) begin
       // We have 6 bits to iterate through, so we can pull them from the numbers 0-63 (a total of 2^6 numbers)
