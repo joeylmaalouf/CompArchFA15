@@ -1,2 +1,7 @@
-*.vvp # executables
-*.vcd # test files
+# ignore binary executables:
+*    # ignore all
+!*.* # then unignore all with extensions
+!*/  # and unignore all directories
+
+# ignore test files
+*.vcd
