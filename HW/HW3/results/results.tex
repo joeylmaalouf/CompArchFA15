@@ -1,0 +1,93 @@
+\title{Computer Arithmetic}
+\author{Joey L. Maalouf\\Franklin W. Olin College of Engineering}
+\date{\today}
+
+
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+
+\section{$\mathtt{91_{10} + C6_{16}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 91_{10} = }$ & $\mathtt{\ 01011011_{2}}$ & \\
+$\mathtt{+C6_{16} = }$ & $\mathtt{+11000110_{2}}$ & \\
+\hline
+& $\mathtt{100100001_{2}}$ & $ = $ \fbox{$\mathtt{289_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{11_{8} - 11_{10}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 11_{8\ } = }$ & $\mathtt{\ 00001001_{2}}$ & \\
+$\mathtt{-11_{10} = }$ & $\mathtt{+11110101_{2}}$ & \\
+\hline
+& $\mathtt{11111110_{2}}$ & $ = $ \fbox{$\mathtt{-2_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{12.3125_{10} + 0110_{I2Q2}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 12.3125_{10\ \ } = }$ & $\mathtt{\ 1100.0101_{U4Q4}}$ & \\
+$\mathtt{+\ \ 0110_{I2Q2} = }$ & $\mathtt{+0001.1000_{U4Q4}}$ & \\
+\hline
+& $\mathtt{1101.1101_{U4Q4}}$ & $ = $ \fbox{$\mathtt{13.8125_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{5.750_{10} - 7.125_{10}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 5.750_{10} = }$ & $\mathtt{\ 0101.1100_{I4Q4}}$ & \\
+$\mathtt{-7.125_{10} = }$ & $\mathtt{+1000.1110_{I4Q4}}$ & \\
+\hline
+& $\mathtt{1110.1010_{I4Q4}}$ & $ = $ \fbox{$\mathtt{-1.375_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{9_{10} * 3_{10}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 9_{10} = }$ & $\mathtt{\ 1001_{2}}$ & \\
+$\mathtt{*3_{10} = }$ & $\mathtt{*0011_{2}}$ & \\
+\hline
+& $\mathtt{\ 00001001_{2}}$ & \\
+& $\mathtt{+00010010_{2}}$ & \\
+\hline
+& $\mathtt{00011011_{2}}$ & $ = $ \fbox{$\mathtt{27_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{-5_{10} * -6_{16}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ -5_{10} = }$ & $\mathtt{\ 11111011_{2}}$ & \\
+$\mathtt{*-6_{16} = }$ & $\mathtt{*11111010_{2}}$ & \\
+\hline
+& $\mathtt{\ 11110110_{2}}$ & \\
+& $\mathtt{\ 11011000_{2}}$ & \\
+& $\mathtt{\ 10110000_{2}}$ & \\
+& $\mathtt{\ 01100000_{2}}$ & \\
+& $\mathtt{\ 11000000_{2}}$ & \\
+& $\mathtt{+10000000_{2}}$ & \\
+\hline
+& $\mathtt{00011110_{2}}$ & $ = $ \fbox{$\mathtt{30_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{9.5_{10} * 2.625_{10}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ 9.5_{10} = }$ & $\mathtt{\ 1001.1000_{U4Q4}}$ & \\
+$\mathtt{*2.625_{10} = }$ & $\mathtt{*0010.1010_{U4Q4}}$ & \\
+\hline
+& $\mathtt{\ 00000001.00110000_{U8Q8}}$ & \\
+& $\mathtt{\ 00000100.11000000_{U8Q8}}$ & \\
+& $\mathtt{+00010011.00000000_{U8Q8}}$ & \\
+\hline
+& $\mathtt{00011000.11110000_{U8Q8}}$ & $ = $ \fbox{$\mathtt{24.9375_{10}}$}\\
+\end{tabular}
+
+\section{$\mathtt{-1.25_{10} * 3.5_{10}}$}
+\begin{tabular}{ r r r }
+$\mathtt{\ -1.25_{10} = }$ & $\mathtt{\ 1110.1100_{I4Q4}}$ & \\
+$\mathtt{*3.5_{10} = }$ & $\mathtt{*0011.1000_{I4Q4}}$ & \\
+\hline
+& $\mathtt{\ 11111111.01100000_{I8Q8}}$ & \\
+& $\mathtt{\ 11111110.11000000_{I8Q8}}$ & \\
+& $\mathtt{+11111101.10000000_{I8Q8}}$ & \\
+\hline
+& $\mathtt{11111011.10100000_{I8Q8}}$ & $ = $ \fbox{$\mathtt{-4.375_{10}}$}\\
+\end{tabular}
+
+\end{document}
