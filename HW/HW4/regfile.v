@@ -1,4 +1,4 @@
-// Deliverable 8
+// Deliverable 7
 `include "register32.v"
 `include "mux32to1by32.v"
 `include "decoders.v"
@@ -23,9 +23,10 @@ module regfile
   wire[31:0] registers[31:0];
   wire[31:0] flags;
   decoder1to32 decoder(flags, RegWrite, WriteRegister);
+  register32 r(registers[0], 32'd0, flags[0], Clk);
   genvar i;
   generate
-    for (i = 0; i < 32; i = i + 1) begin: reg_loop
+    for (i = 1; i < 32; i = i + 1) begin: reg_loop
       register32 r(registers[i], WriteData, flags[i], Clk);
     end
   endgenerate
