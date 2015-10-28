@@ -1,3 +1,4 @@
+`include "regfile.v"
 //------------------------------------------------------------------------------
 // Test harness validates hw4testbench by connecting it to various functional 
 // or broken register files, and verifying that it correctly identifies each
@@ -105,8 +106,8 @@ module hw4testbench
     #10
 
     // Test Case 1: 
-    //   Write '42' to register 2, verify with Read Ports 1 and 2
-    //   (Passes because example register file is hardwired to return 42)
+    // Write '42' to register 2, verify with Read Ports 1 and 2
+    // (Passes because example register file is hardwired to return 42)
     WriteRegister = 5'd2;
     WriteData = 32'd42;
     RegWrite = 1;
@@ -121,8 +122,8 @@ module hw4testbench
     end
 
     // Test Case 2: 
-    //   Write '15' to register 2, verify with Read Ports 1 and 2
-    //   (Fails with example register file, but should pass with yours)
+    // Write '15' to register 2, verify with Read Ports 1 and 2
+    // (Fails with example register file, but should pass with yours)
     WriteRegister = 5'd2;
     WriteData = 32'd15;
     RegWrite = 1;
