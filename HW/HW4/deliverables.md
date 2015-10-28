@@ -6,13 +6,13 @@
 ![Structural variants of gating a D-flip-flip with a clock and a write-enable flag](deliv1.png)
 
 ### 2
-`register32.v`
+[`register32.v`](register32.v)
 
 ### 3
-`register32zero.v`
+[`register32zero.v`](register32zero.v)
 
 ### 4
-...
+[`mux32to1by1.v`](mux32to1by1.v)
 
 ### 5
 ...

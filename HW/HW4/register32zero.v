@@ -6,10 +6,7 @@ module register32zero
   input wrenable,
   input clk
 );
-
   initial begin
     q = 32'b00000000000000000000000000000000;
-    $display("%b", q);
   end
-
 endmodule

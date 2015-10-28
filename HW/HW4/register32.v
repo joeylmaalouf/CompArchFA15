@@ -6,11 +6,9 @@ module register32
   input wrenable,
   input clk
 );
-
   always @(posedge clk) begin
     if(wrenable) begin
       q = d;
     end
   end
-
 endmodule
