@@ -3,7 +3,7 @@
 #### Joey Maalouf
 
 ### 1
-...
+![Structural variants of gating a D-flip-flip with a clock and a write-enable flag](deliv1.png)
 
 ### 6
 Our enable input is a single bit, either 0 or 1. The address is a 5-bit number representing a value between 0 and 31 (inclusive).
