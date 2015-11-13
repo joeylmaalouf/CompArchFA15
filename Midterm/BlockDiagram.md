@@ -1,6 +1,6 @@
 # Block Diagram
 
-![Block Diagram](images/BlockDiagram.png)
+![Block Diagram](images/blockdiagram.png)
 
 Our LED has 4 possible outputs, so we use a 4:1 multiplexer to choose between them. The selection is done by the finite state machine, the state of which changes with every (input-conditioned) button press.
 
