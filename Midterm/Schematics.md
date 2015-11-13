@@ -64,6 +64,5 @@ This component takes in an enable signal and, when it is high, steps through the
 | Component            | Cost Per | # Used | Subtotal |
 |----------------------|----------|--------|----------|
 | 4-stage ring counter | 83       | 1      | 83       |
-| OR gate              | 3        | 2      | 6        |
-| 2:1 mux              | 7        | 2      | 14       |
-Total: **103** GIE
+| NOR gate             | 2        | 2      | 4        |
+Total: **87** GIE
