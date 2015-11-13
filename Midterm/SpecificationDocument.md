@@ -38,9 +38,9 @@ The light has 4 possible patterns, each with a unique set of flags for the light
 
 ![FSM](images/fsm.png)
 
-| State | Light Power Level | Next State |
-|-------|-------------------|------------|
-| Off   | 0                 | On         |
-| On    | 1                 | Blink      |
-| Blink | 1, 0, 1, 0, ...   | Dim        |
-| Dim   | 0.5               | Off        |
+| # | State | Light Power Level | Next State | Sel0 | Sel1 |
+|---|-------|-------------------|------------|------|------|
+| 0 | Off   | 0                 | On         | 0    | 0    |
+| 1 | On    | 1                 | Blink      | 0    | 1    |
+| 2 | Blink | 1, 0, 1, 0, ...   | Dim        | 1    | 0    |
+| 3 | Dim   | 0.5               | Off        | 1    | 1    |
