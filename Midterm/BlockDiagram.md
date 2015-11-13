@@ -1,3 +1,3 @@
 # Block Diagram
 
-![Block Diagram](images/BlockDiagram.pdf)
+![Block Diagram](images/BlockDiagram.png)
