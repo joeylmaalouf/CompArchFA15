@@ -20,7 +20,7 @@ This component takes in two 14-bit binary numbers, as well as a carry-in bit, an
 ![14-bit Adder](images/adder14schematic.png)
 
 ##### Gate Inputs
-(10 per 1-bit adder * 14 1-bit adders) + (14 sum-joiner inputs) + (1 A-splitter input) + (1 B-splitter input) = **156**
+(10 per 1-bit adder * 14 1-bit adders) = **140**
 
 
 ### Input Conditioner
