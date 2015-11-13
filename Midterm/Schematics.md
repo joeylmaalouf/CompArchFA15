@@ -20,7 +20,10 @@ This component takes in two 14-bit binary numbers, as well as a carry-in bit, an
 ![14-bit Adder](images/adder14schematic.png)
 
 ##### Gate Inputs
-(10 per 1-bit adder * 14 1-bit adders) = **140**
+| Component   | Cost Per | # Used | Subtotal |
+|-------------|----------|--------|----------|
+| 1-bit Adder | 10       | 14     | 140      |
+Total: **140** GIE
 
 
 ### Input Conditioner
@@ -55,7 +58,12 @@ This component takes in an enable signal and, when it is high, steps through the
 * Sel1, 1 bit
 
 ##### Schematic
-...
+![Finite State Machine](images/fsmschematic.png)
 
 ##### Gate Inputs
-...
+| Component            | Cost Per | # Used | Subtotal |
+|----------------------|----------|--------|----------|
+| 4-stage ring counter | 83       | 1      | 83       |
+| OR gate              | 3        | 2      | 6        |
+| 2:1 mux              | 7        | 2      | 14       |
+Total: **103** GIE
