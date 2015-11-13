@@ -54,7 +54,7 @@ Total: **350** GIE
 ### Input Conditioner
 
 ##### Specification
-This component takes in a (potentially) noisy serial signal and filters out any noise/instability by only letting the signal go through when it stays the same value for 33 clock cycles (just over 1ms) in a row.
+This component takes in a (potentially) noisy serial signal and filters out any noise/instability by only letting the signal go through when it stays the same value for 33 clock cycles (just over 1ms) in a row. Any cycles in which the values are the same increment a counter, while any cycles in which the values are different [DO NOTHING | RESET THE COUNTER]. When the counter reaches 33, it allows the signal to pass through.
 
 ##### Inputs
 * Noisy, 1 bit
@@ -64,7 +64,7 @@ This component takes in a (potentially) noisy serial signal and filters out any 
 * Smooth, 1 bit
 
 ##### Schematic
-...
+![Input Conditioner](images/inputconditionerschematic.png)
 
 ##### Gate Inputs
 ...
