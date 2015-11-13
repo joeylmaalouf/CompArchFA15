@@ -4,7 +4,7 @@
 ### 14-bit Adder
 
 ##### Specification
-This component takes in two 14-bit binary numbers, as well as a carry-in bit, and adds them together. It produces a 14-bit sum output, as well as a carry-out bit.
+This component takes in two 14-bit binary numbers, as well as a carry-in bit, and adds them together. It produces a 14-bit sum output, as well as a carry-out bit. Because it is composed internally of 14 chained 1-bit adders, that schematic is included below as well.
 
 ##### Inputs
 * A, 14 bits
@@ -16,7 +16,8 @@ This component takes in two 14-bit binary numbers, as well as a carry-in bit, an
 * Cout, 1 bit
 
 ##### Schematic
-...
+![1-bit Adder](images/adder1schematic.png)
+![14-bit Adder](images/adder14schematic.png)
 
 ##### Gate Inputs
 ...
