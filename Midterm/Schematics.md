@@ -52,6 +52,7 @@ This component takes in an enable signal and, when it is high, steps through the
 
 ##### Inputs
 * Enable, 1 bit
+* clk, 1 bit
 
 ##### Outputs
 * Sel0, 1 bit
