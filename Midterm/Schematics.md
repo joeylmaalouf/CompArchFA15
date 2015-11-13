@@ -21,9 +21,9 @@ This component takes in two 1-bit binary numbers, as well as a carry-in bit, and
 ##### Gate Inputs
 | Component | Cost Per | # Used | Subtotal |
 |-----------|----------|--------|----------|
-| XOR gate  | 8        | 2      | 16       |
-| AND gate  | 3        | 2      | 6        |
-| OR gate   | 3        | 1      | 3        |
+| XOR Gate  | 8        | 2      | 16       |
+| AND Gate  | 3        | 2      | 6        |
+| OR Gate   | 3        | 1      | 3        |
 Total: **25** GIE
 
 
@@ -89,6 +89,6 @@ This component takes in an enable signal and, when it is high, steps through the
 ##### Gate Inputs
 | Component            | Cost Per | # Used | Subtotal |
 |----------------------|----------|--------|----------|
-| 4-stage ring counter | 83       | 1      | 83       |
-| NOR gate             | 2        | 2      | 4        |
+| 4-Stage Ring Counter | 83       | 1      | 83       |
+| NOR Gate             | 2        | 2      | 4        |
 Total: **87** GIE
