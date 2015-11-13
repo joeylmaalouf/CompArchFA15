@@ -1,10 +1,36 @@
 # Schematics
 
 
+### 1-bit Adder
+
+##### Specification
+This component takes in two 1-bit binary numbers, as well as a carry-in bit, and adds them together. It produces a 1-bit sum output, as well as a carry-out bit.
+
+##### Inputs
+* A, 1 bit
+* B, 1 bit
+* Cin, 1 bit
+
+##### Outputs
+* Sum, 1 bit
+* Cout, 1 bit
+
+##### Schematic
+![1-bit Adder](images/adder1schematic.png)
+
+##### Gate Inputs
+| Component | Cost Per | # Used | Subtotal |
+|-----------|----------|--------|----------|
+| XOR gate  | 8        | 2      | 16       |
+| AND gate  | 3        | 2      | 6        |
+| OR gate   | 3        | 1      | 3        |
+Total: **25** GIE
+
+
 ### 14-bit Adder
 
 ##### Specification
-This component takes in two 14-bit binary numbers, as well as a carry-in bit, and adds them together. It produces a 14-bit sum output, as well as a carry-out bit. Because it is composed internally of 14 chained 1-bit adders, that schematic is included below as well.
+This component takes in two 14-bit binary numbers, as well as a carry-in bit, and adds them together. It produces a 14-bit sum output, as well as a carry-out bit.
 
 ##### Inputs
 * A, 14 bits
@@ -16,14 +42,13 @@ This component takes in two 14-bit binary numbers, as well as a carry-in bit, an
 * Cout, 1 bit
 
 ##### Schematic
-![1-bit Adder](images/adder1schematic.png)
 ![14-bit Adder](images/adder14schematic.png)
 
 ##### Gate Inputs
 | Component   | Cost Per | # Used | Subtotal |
 |-------------|----------|--------|----------|
-| 1-bit Adder | 10       | 14     | 140      |
-Total: **140** GIE
+| 1-bit Adder | 25       | 14     | 350      |
+Total: **350** GIE
 
 
 ### Input Conditioner
