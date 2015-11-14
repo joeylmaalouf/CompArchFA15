@@ -75,7 +75,7 @@ This component takes in a (potentially) noisy serial signal and filters out any 
 | XNOR Gate             | 2        | 1      | 2        |
 | Inverter              | 1        | 1      | 1        |
 | Gated Buffer          | 2        | 1      | 2        |
-Total: **723** GIE
+Total: **733** GIE
 
 
 ### Finite State Machine
