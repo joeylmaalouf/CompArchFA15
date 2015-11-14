@@ -47,8 +47,8 @@ This component takes in two 14-bit binary numbers, as well as a carry-in bit, an
 ##### Gate Inputs
 | Component   | Cost Per | # Used | Subtotal |
 |-------------|----------|--------|----------|
-| 1-bit Adder | 25       | 14     | 350      |
-Total: **350** GIE
+| 1-bit Adder | 15       | 14     | 210      |
+Total: **210** GIE
 
 
 ### Input Conditioner
