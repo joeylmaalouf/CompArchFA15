@@ -21,10 +21,10 @@ This component takes in two 1-bit binary numbers, as well as a carry-in bit, and
 ##### Gate Inputs
 | Component | Cost Per | # Used | Subtotal |
 |-----------|----------|--------|----------|
-| XOR Gate  | 8        | 2      | 16       |
+| XOR Gate  | 3        | 2      | 6        |
 | AND Gate  | 3        | 2      | 6        |
 | OR Gate   | 3        | 1      | 3        |
-Total: **25** GIE
+Total: **15** GIE
 
 
 ### 14-bit Adder
@@ -54,7 +54,7 @@ Total: **350** GIE
 ### Input Conditioner
 
 ##### Specification
-This component takes in a (potentially) noisy serial signal and filters out any noise/instability by only letting the signal go through when it stays the same value for 33 clock cycles (just over 1ms) in a row. Any cycles in which the values are the same increment a counter, while any cycles in which the values are different [DO NOTHING | RESET THE COUNTER]. When the counter reaches 33, it allows the signal to pass through.
+This component takes in a (potentially) noisy serial signal and filters out any noise/instability by only letting the signal go through when it stays the same value for 33 clock cycles (just over 1ms). Any cycles in which the values are the same increment a counter, while any cycles in which the values are different do nothing. When the counter reaches 33, it allows the signal to pass through.
 
 ##### Inputs
 * Noisy, 1 bit
@@ -67,7 +67,15 @@ This component takes in a (potentially) noisy serial signal and filters out any 
 ![Input Conditioner](images/inputconditionerschematic.png)
 
 ##### Gate Inputs
-...
+| Component             | Cost Per | # Used | Subtotal |
+|-----------------------|----------|--------|----------|
+| 33-Stage Ring Counter | 692      | 1      | 692      |
+| D-Flip-Flop           | 13       | 2      | 26       |
+| JK-Flip-Flop          | 10       | 1      | 10       |
+| XNOR Gate             | 2        | 1      | 2        |
+| Inverter              | 1        | 1      | 1        |
+| Gated Buffer          | 2        | 1      | 2        |
+Total: **723** GIE
 
 
 ### Finite State Machine
